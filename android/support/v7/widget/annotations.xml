@@ -1,0 +1,6 @@
+<root>
+    <item name='android.support.v7.widget.CardView'>
+        <annotation name='org.jetbrains.annotations.NotNull' />
+        <annotation name='java.lang.annotation.Deprecated' />
+    </item>
+</root>

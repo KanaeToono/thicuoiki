@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Đồ án cuối kì</string>
+    <string name="toolbar_name">Tin tức</string>
+    <string name="fab_description">FAB button description</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Cài đặt</string>
+    <string name="text_logo_toobar">Quản lí nhắc nhở</string>
+    <string name="action_refresh">Làm mới</string>
+    <string name="action_menu">Thực đơn</string>
+    <string name="text_notification">Thông báo</string>
+    <string name="text_manager_task">Quản lí nhăc nhở</string>
+    <string name="title_toolbar_description">Lịch trình</string>
+    <string name="textView_add_new_task">Thêm công việc</string>
+    <string name="editText_add_new_task">Chủ đề</string>
+    <string name="textView_btn_date_time_start">Ngày bắt đầu</string>
+    <string name="textView_btn_date_start">dd/mm/yyyy</string>
+    <string name="textView_btn_time_start">hh:mm</string>
+    <string name="textView_btn_date_time_end">Ngày kết thúc</string>
+    <string name="textView_btn_date_end">dd/mm/yyyy</string>
+    <string name="textView_btn_time_end">hh:mm</string>
+    <string name="textView_spinner">Mức độ</string>
+    <string name="editText_description_task">Mô tả</string>
+    <string name="action_choose_item_menu_rss">Khoa Tin</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">Close drawer</string>
+    <string name="title_nav_inCountry_news">Vn press</string>
+    <string name="title_nav_national_news">CNN tin tức</string>
+    <string name="action_extensive">Mở rộng</string>
+    <string name="nave_home">Trang chủ</string>
+    <string name="nav_list_tasks_today">Công việc hôm nay</string>
+    <string name="nav_sort_task">Sắp xếp</string>
+    <string name="nav_add_new_task_lunar_calendar">Đặt theo lịch âm</string>
+    <string name="nav_search_task">Tìm kiếm</string>
+    <string name="title_collapsing_list_task_fragment">Lịch trình</string>
+    <string name="schedule">Lịch trình</string>
+    <string name="error">Lỗi</string>
+    <string name="basic_action_1">Action_1</string>
+    <string name="basic_action_2">Action_2</string>
+    <string name="basic_del">Xóa</string>
+    <string name="str_orange">#fe7b27</string>
+    <string name="str_green">#3cac69</string>
+    <string name="str_red">#FF4444</string>
+    <string name="str_yellow">#FFBB33</string>
+    <string name="str_sky_blue">#33B5E5</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="action_back_to_before_frg">Quay lại</string>
+    <string name="action_share_info">Chia sẽ</string>
+
+    <string name="notify_new_task_message">Thông báo mới</string>
+    <string name="toolbar_schedule">Lịch trình</string>
+    <string name="empty_fields">Điền đầy đủ trường </string>
+    <!--Navigation Drawer Menu Item-->
+    <string-array name="nav_drawer_items">
+        <item> Trang chủ </item>
+        <item>Công việc hôm nay</item>
+        <item>Tìm kiếm </item>
+        <item>Đặt theo lịch âm</item>
+        <item>Sắp xếp </item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_home_black_18dp</item>
+        <item>@drawable/ic_schedule_black_18dp</item>
+        <item>@drawable/ic_search_black_18dp</item>
+        <item>@drawable/ic_note_add_black_18dp</item>
+        <item>@drawable/ic_sort_black_18dp</item>
+    </array>
+
+</resources>
