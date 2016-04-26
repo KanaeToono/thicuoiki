@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/E:/TVO_TRAINING_ANDROID/finaltest/app/src/main/res/values-vi/colors.xml -->
+    <eat-comment/>
+    <integer-array name="androidcolors">
+        <item>@color/blue</item>
+        <item>@color/purple</item>
+        <item>@color/green</item>
+        <item>@color/orange</item>
+        <item>@color/red</item>
+        <item>@color/darkblue</item>
+        <item>@color/darkpurple</item>
+        <item>@color/darkgreen</item>
+        <item>@color/darkorange</item>
+        <item>@color/darkred</item>
+    </integer-array>
+    <!-- From: file:/E:/TVO_TRAINING_ANDROID/finaltest/app/src/main/res/values-vi/strings.xml -->
+    <eat-comment/>
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_home_black_18dp</item>
+        <item>@drawable/ic_schedule_black_18dp</item>
+        <item>@drawable/ic_search_black_18dp</item>
+        <item>@drawable/ic_note_add_black_18dp</item>
+        <item>@drawable/ic_sort_black_18dp</item>
+    </array>
+    <string-array name="nav_drawer_items">
+        <item> Trang chủ </item>
+        <item>Công việc hôm nay</item>
+        <item>Tìm kiếm </item>
+        <item>Đặt theo lịch âm</item>
+        <item>Sắp xếp </item>
+    </string-array>
+    <!-- From: file:/E:/TVO_TRAINING_ANDROID/finaltest/app/src/main/res/values-vi/colors.xml -->
+    <eat-comment/>
+    <color name="accent">#FFEB3B</color>
+    <color name="accentLight">#F4FF81</color>
+    <color name="accent_bright">#FFF493</color>
+    <color name="accent_translucent">#80FFEB3B</color>
+    <item name="blue" type="color">#FF33B5E5</item>
+    <color name="colorAccent">#FF80AB</color>
+    <color name="colorDivider">#B6B6B6</color>
+    <color name="colorIcons">#FFFFFF</color>
+    <color name="colorPrimary">#F50057</color>
+    <color name="colorPrimaryDark">#C51162</color>
+    <color name="colorPrimaryLight">#FFCDD2</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#727272</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="color_accent_pink">#ff4081</color>
+    <color name="color_primary_blue">#2196f3</color>
+    <color name="color_primary_blue_dark">#1976d2</color>
+    <color name="color_primary_green"> #4caf50</color>
+    <color name="color_primary_green_dark">#388e3c</color>
+    <color name="color_primary_red">#f44336</color>
+    <color name="color_primary_red_dark">#d32f2f</color>
+    <color name="color_shadow">#44000000</color>
+    <item name="color_text_counter" type="color">#FFFFFF</item>
+    <item name="counter_text_bg" type="color">#FFCC0000</item>
+    <item name="darkblue" type="color">#FF0099CC</item>
+    <item name="darkgreen" type="color">#FF669900</item>
+    <item name="darkorange" type="color">#FFFF8800</item>
+    <item name="darkpurple" type="color">#FF9933CC</item>
+    <item name="darkred" type="color">#FFCC0000</item>
+    <color name="divider">#B6B6B6</color>
+    <item name="green" type="color">#FF99CC00</item>
+    <color name="icons">#FFFFFF</color>
+    <item name="list_background" type="color">#ffffe6</item>
+    <item name="list_background_pressed" type="color">#cc6600</item>
+    <item name="list_divider" type="color">#000</item>
+    <item name="list_item_title" type="color">#000</item>
+    <color name="navigationBarColor">#000000</color>
+    <item name="orange" type="color">#FFFFBB33</item>
+    <color name="primary">#4CAF50</color>
+    <color name="primary_dark">#388E3C</color>
+    <color name="primary_light">#C8E6C9</color>
+    <color name="primary_text">#212121</color>
+    <item name="purple" type="color">#FFAA66CC</item>
+    <item name="red" type="color">#FFFF4444</item>
+    <color name="secondary_text">#727272</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <!-- From: file:/E:/TVO_TRAINING_ANDROID/finaltest/app/src/main/res/values-vi/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="elevation_high">12dp</dimen>
+    <dimen name="elevation_low">9dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="flexible_space_height">72dp</dimen>
+    <dimen name="flexible_space_image_height">240dp</dimen>
+    <dimen name="flexible_space_show_fab_offset">120dp</dimen>
+    <dimen name="margin_extra_short">4dp</dimen>
+    <dimen name="margin_short">8dp</dimen>
+    <dimen name="margin_standard">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="padding">5dp</dimen>
+    <dimen name="parallax_image_height">180dp</dimen>
+    <dimen name="spacing_large">16dp</dimen>
+    <dimen name="spacing_medium">8dp</dimen>
+    <dimen name="spacing_xlarge">32dp</dimen>
+    <dimen name="spacing_xsmall">2dp</dimen>
+    <dimen name="status_bar_height">25dp</dimen>
+    <dimen name="tab_height">48dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="toolbar_margin_start">72dp</dimen>
+    <!-- From: file:/E:/TVO_TRAINING_ANDROID/finaltest/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-vi/values-vi.xml -->
+    <eat-comment/>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Điều hướng về trang chủ"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Điều hướng lên trên"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Thêm tùy chọn"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Xong"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Xem tất cả"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Chọn một ứng dụng"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"TẮT"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"BẬT"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"Tìm kiếm…"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Xóa truy vấn"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Tìm kiếm truy vấn"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Tìm kiếm"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Gửi truy vấn"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Tìm kiếm bằng giọng nói"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Chia sẻ với"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Chia sẻ với %s"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Thu gọn"</string>
+    <!-- From: file:/E:/TVO_TRAINING_ANDROID/finaltest/app/src/main/res/values-vi/strings.xml -->
+    <eat-comment/>
+    <string name="action_back_to_before_frg">Quay lại</string>
+    <string name="action_choose_item_menu_rss">Khoa Tin</string>
+    <string name="action_extensive">Quản lí nhắc nhở</string>
+    <string name="action_important_task">Công việc quan trọng</string>
+    <string name="action_incomplete_task">Công việc chưa hoàn thành</string>
+    <string name="action_menu">Thực đơn</string>
+    <string name="action_refresh">Làm mới</string>
+    <string name="action_settings">Cài đặt</string>
+    <string name="action_share_info">Chia sẽ</string>
+    <string name="action_show_complete_task">Công việc hoàn thành</string>
+    <string name="action_show_default_tasks">Mặc định</string>
+    <string name="action_show_sort_deadline_day_task">Sắp xếp theo ngày kết thúc</string>
+    <string name="action_show_sort_pioriry_tasks">Sắp xếp theo mức độ quan trọng</string>
+    <string name="action_show_sort_start_day_tasks">Sắp xếp theo ngày bắt đầu</string>
+    <string name="action_show_task_today">Công việc hôm nay</string>
+    <string name="app_name">Đồ án cuối kì</string>
+    <string name="basic_action_1">Action_1</string>
+    <string name="basic_action_2">Action_2</string>
+    <string name="basic_del">Xóa</string>
+    <string name="btn_ok">Ok</string>
+    <string name="cancle_mark_done_task">Hủy đánh dấu xong nhiệm vụ</string>
+    <string name="drawer_close">Close drawer</string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="editText_add_new_task">Chủ đề</string>
+    <string name="editText_description_task">Mô tả</string>
+    <string name="empty_fields">Điền đầy đủ trường </string>
+    <string name="error">Lỗi</string>
+    <string name="fab_description">FAB button description</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="mark_done_task">Đánh dấu xong nhiệm vụ</string>
+    <string name="message">Tin</string>
+    <string name="messageCon">Bạn muốn xóa công việc này?</string>
+    <string name="nav_add_new_task_lunar_calendar">Đặt theo lịch âm</string>
+    <string name="nav_list_tasks_today">Công việc hôm nay</string>
+    <string name="nav_search_task">Tìm kiếm</string>
+    <string name="nav_sort_task">Sắp xếp</string>
+    <string name="nave_home">Trang chủ</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="no">Không</string>
+    <string name="notify_new_task_message">Thông báo mới</string>
+    <string name="open">Mở</string>
+    <string name="question">Cảnh cáo</string>
+    <string name="schedule">Lịch trình</string>
+    <!-- From: file:/E:/TVO_TRAINING_ANDROID/finaltest/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-vi/values-vi.xml -->
+    <eat-comment/>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <!-- From: file:/E:/TVO_TRAINING_ANDROID/finaltest/app/src/main/res/values-vi/strings.xml -->
+    <eat-comment/>
+    <string name="str_green">#3cac69</string>
+    <string name="str_orange">#fe7b27</string>
+    <string name="str_red">#FF4444</string>
+    <string name="str_sky_blue">#33B5E5</string>
+    <string name="str_yellow">#FFBB33</string>
+    <string name="textViewDateEndTask">Ngày kết thúc</string>
+    <string name="textViewDateStartTask">Ngày bắt đầu</string>
+    <string name="textViewDetails">Chi tiết</string>
+    <string name="textViewSubject">Chủ để</string>
+    <string name="textViewTimeEndTask">Giờ kết thúc</string>
+    <string name="textViewTimeStartTask">Giờ bắt đầu</string>
+    <string name="textView_add_new_task">Thêm công việc</string>
+    <string name="textView_btn_date_end">dd/mm/yyyy</string>
+    <string name="textView_btn_date_start">dd/mm/yyyy</string>
+    <string name="textView_btn_date_time_end">Ngày kết thúc</string>
+    <string name="textView_btn_date_time_start">Ngày bắt đầu</string>
+    <string name="textView_btn_time_end">hh:mm</string>
+    <string name="textView_btn_time_start">hh:mm</string>
+    <string name="textView_spinner">Mức độ</string>
+    <string name="text_logo_toobar">Quản lí nhắc nhở</string>
+    <string name="text_manager_task">Quản lí nhăc nhở</string>
+    <string name="text_notification">Thông báo</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_collapsing_list_task_fragment">Lịch trình</string>
+    <string name="title_nav_about_app">About</string>
+    <string name="title_nav_add_on">Mở rộng</string>
+    <string name="title_nav_inCountry_news">Trường</string>
+    <string name="title_nav_national_news">Khoa Tin</string>
+    <string name="title_nav_register_receive_news">Đăng kí</string>
+    <string name="title_nav_settings">Cài đặt</string>
+    <string name="title_toolbar_description">Lịch trình</string>
+    <string name="toolbar_name">Tin tức</string>
+    <string name="toolbar_schedule">Lịch trình</string>
+    <string name="turn_off_alarm">Hủy nhắc nhở</string>
+    <string name="turn_on_alarm">Bật nhắc nhở</string>
+    <string name="yes">Có</string>
+    <!-- From: file:/E:/TVO_TRAINING_ANDROID/finaltest/app/src/main/res/values-vi/styles.xml -->
+    <eat-comment/>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@color/primary_dark</item>
+        <item name="android:textColorPrimaryInverse">@color/colorWhite</item>
+    </style>
+    <style name="CustomDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:bottomBright">#fff</item>
+        <item name="android:bottomDark">#fff</item>
+        <item name="android:bottomMedium">#fff</item>
+        <item name="android:centerBright">#fff</item>
+        <item name="android:centerDark">#fff</item>
+        <item name="android:centerMedium">#fff</item>
+        <item name="android:fullBright">#7D266A</item>
+        <item name="android:fullDark">#7D266A</item>
+        <item name="android:topBright">#2f6699</item>
+        <item name="android:topDark">#2f6699</item>
+    </style>
+    <style name="FabStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="borderWidth">0dp</item>
+        <item name="elevation">6dp</item>
+        <item name="pressedTranslationZ">12dp</item>
+        <item name="rippleColor">@color/green</item>
+
+    </style>
+    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
+
+    </style>
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/primary_dark</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">#FF4081</item>
+
+    </style>
+    <style name="MyToolbarStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:maxHeight">@dimen/abc_action_bar_default_height_material</item>
+        <item name="android:background">@color/primary_dark</item>
+        <item name="android:textColorPrimaryInverse">@color/colorWhite</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+
+    </style>
+    <style name="NoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--   your app branding color for the app bar -->
+        <item name="colorPrimary">@color/primary_dark</item>
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+        <item name="colorAccent">#FF4081</item>
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+        <item name="windowActionBar">false</item>
+
+
+    </style>
+</resources>

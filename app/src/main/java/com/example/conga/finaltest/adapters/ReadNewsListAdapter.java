@@ -1,6 +1,7 @@
 package com.example.conga.finaltest.adapters;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.Paint;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -8,12 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.conga.finaltest.R;
 import com.example.conga.finaltest.controllers.Dowloader;
-import com.example.conga.finaltest.database.databaseadapters.RssItemDatabase;
 import com.example.conga.finaltest.models.RssItem;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.assist.FailReason;
+import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 
 import java.util.List;
 
@@ -25,11 +29,12 @@ public class ReadNewsListAdapter extends BaseAdapter {
     private List<RssItem> mArrayListRssItems;
     private LayoutInflater mLayoutInflater;
     private Context mContext;
-    private RssItemDatabase mRssItemDatabase;
-    private Dowloader mDowloader;;
+
+    private Dowloader mDowloader;
+    ;
 
 
-   // private Integer[] mImageAlarm;
+    // private Integer[] mImageAlarm;
     private Integer[] mImagePiorityTask;
     private Integer[] mImageDoneTask;
 
@@ -38,8 +43,8 @@ public class ReadNewsListAdapter extends BaseAdapter {
         this.mArrayListRssItems = mArrayListRssItems;
         this.mContext = mContext;
         mLayoutInflater = LayoutInflater.from(mContext);
-      //  this.mImageAlarm = mImageAlarm;
-        this.mImagePiorityTask =mImagePiorityTask;
+        //  this.mImageAlarm = mImageAlarm;
+        this.mImagePiorityTask = mImagePiorityTask;
         this.mImageDoneTask = mImageDoneTask;
 
     }
@@ -68,24 +73,24 @@ public class ReadNewsListAdapter extends BaseAdapter {
     // class ViewHolder
     class ViewHolder {
         ImageView imageViewImageTitle;
-        ImageView imageViewMarkReadRss;
-        ImageView imageViewMarkRssImportant;
+        ImageView imageViewDownLoad;
         TextView textViewTitleRss;
 
     }
-//getView
+
+    //getView
     @Override
     public View getView(final int pos, View viewcontainer, ViewGroup viewGroup) {
-        int checkAlarmTask =0;
-         mRssItemDatabase = new RssItemDatabase(mContext);
+        int checkAlarmTask = 0;
+
         final ViewHolder viewHolder;
         if (viewcontainer == null) {
             viewcontainer = mLayoutInflater.inflate(R.layout.item_list_view_read_news_fragmnet, null);
             viewHolder = new ViewHolder();
             viewHolder.imageViewImageTitle = (ImageView) viewcontainer.findViewById(R.id.imageView_title_icon);
-            viewHolder.imageViewMarkReadRss = (ImageView) viewcontainer.findViewById(R.id.imageView_mark_read_rss);
-            viewHolder.imageViewMarkRssImportant= (ImageView) viewcontainer.findViewById(R.id.imageView_mark_rss_important);
-            viewHolder.textViewTitleRss= (TextView) viewcontainer.findViewById(R.id.textView_title_news);
+            viewHolder.imageViewDownLoad = (ImageView) viewcontainer.findViewById(R.id.imageView_download);
+        //    viewHolder.imageViewMarkRssImportant = (ImageView) viewcontainer.findViewById(R.id.imageView_mark_rss_important);
+            viewHolder.textViewTitleRss = (TextView) viewcontainer.findViewById(R.id.textView_title_news);
 
             viewcontainer.setTag(viewHolder);
         } else {
@@ -94,28 +99,40 @@ public class ReadNewsListAdapter extends BaseAdapter {
         viewHolder.textViewTitleRss.setText(mArrayListRssItems.get(pos).getTitle());
 
         // check task done or not and set icon on listview
-        if(mArrayListRssItems.get(pos).getStatus_check() == 1){
+        if (mArrayListRssItems.get(pos).getStatus_check() == 1) {
             viewHolder.textViewTitleRss.setPaintFlags(viewHolder.textViewTitleRss.getPaintFlags()
                     | Paint.STRIKE_THRU_TEXT_FLAG);
 
-        }
-        else {
+        } else {
             viewHolder.textViewTitleRss.setPaintFlags(viewHolder.textViewTitleRss.getPaintFlags()
                     & (~Paint.STRIKE_THRU_TEXT_FLAG));
 
         }
         // handle click imageViewMarkDoneTask
-        switch(mArrayListRssItems.get(pos).getStatus_check())
-        {
-            case 0:  checkAlarmTask = 0;
-                viewHolder.imageViewMarkReadRss.setTag(R.drawable.ic_done_black_18dp);
 
-                break;
-            case 1: checkAlarmTask = 1 ;
 
-                viewHolder.imageViewMarkReadRss.setTag(R.drawable.ic_clear_black_18dp);
-                break;
-        }
+        final ProgressBar progressBar = (ProgressBar) viewcontainer.findViewById(R.id.progressBar);
+        ImageLoader.getInstance().displayImage(mArrayListRssItems.get(pos).getImageUrl(), viewHolder.imageViewImageTitle, new ImageLoadingListener() {
+            @Override
+            public void onLoadingStarted(String imageUri, View view) {
+                progressBar.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
+                progressBar.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
+                progressBar.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onLoadingCancelled(String imageUri, View view) {
+                progressBar.setVisibility(View.GONE);
+            }
+        });
 //        viewHolder.imageViewMarkReadRss.setImageResource(mImageDoneTask[checkAlarmTask]);
 //        viewHolder.imageViewMarkReadRss.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -144,15 +161,18 @@ public class ReadNewsListAdapter extends BaseAdapter {
         //handle turn on alarm
 
         // set On listview icon of piority task
-        switch(mArrayListRssItems.get(pos).getStatus_piority())
-        {
-            case 0:  checkAlarmTask = 0;break;
-            case 1: checkAlarmTask = 1 ;break;
+        switch (mArrayListRssItems.get(pos).getStatus_piority()) {
+            case 0:
+                checkAlarmTask = 0;
+                break;
+            case 1:
+                checkAlarmTask = 1;
+                break;
         }
 
 
-//        ////
-//        final ProgressBar progressBar = (ProgressBar) viewcontainer.findViewById(R.id.progressBar);
+        ////
+//      //  final ProgressBar progressBar = (ProgressBar) viewcontainer.findViewById(R.id.progressBar);
 //        ImageLoader.getInstance().displayImage(mArrayListRssItems.get(pos).getImageUrl(), viewHolder.imageViewImageTitle, new ImageLoadingListener() {
 //            @Override
 //            public void onLoadingStarted(String imageUri, View view) {
@@ -174,8 +194,8 @@ public class ReadNewsListAdapter extends BaseAdapter {
 //                progressBar.setVisibility(View.GONE);
 //            }
 //        });
-       // viewHolder..setImageResource(mImagePiorityTask[checkAlarmTask]);
-       // mTaskDatabaseAdapter.closeDB();
+        // viewHolder..setImageResource(mImagePiorityTask[checkAlarmTask]);
+        // mTaskDatabaseAdapter.closeDB();
         return viewcontainer;
     }
 // handle turn on alarm

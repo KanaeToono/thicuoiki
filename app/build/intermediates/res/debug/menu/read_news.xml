@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_tieu_diem"
+        android:title="@string/action_tieu_diem"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/action_thong_tin_dao_tao"
+        android:title="@string/action_thong_tin_dao_tao"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/action_cong_tac_sinh_vien"
+        android:title="@string/action_cong_tac_sinh_vien"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/action_khao_thi_va_dam_bao_chat_luong"
+        android:title="@string/action_khao_thi_va_dam_bao_chat_luong"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/action_khoa_hoc_sau_dai_hoc"
+        android:title="@string/action_khoa_hoc_sau_dai_hoc"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/action_dang_uy"
+        android:title="@string/action_dang_uy"
+        app:showAsAction="always|withText" />
+  <item
+        android:id="@+id/action_doan_thanh_nien"
+        android:title="@string/action_doan_thanh_nien"
+        app:showAsAction="always|withText" />
+  <item
+        android:id="@+id/action_tin_sinh_vien"
+        android:title="@string/action_tin_sinh_vien"
+        app:showAsAction="always|withText" />
+
+</menu><!-- From: file:/E:/TVO_TRAINING_ANDROID/finaltest/app/src/main/res/menu/read_news.xml -->

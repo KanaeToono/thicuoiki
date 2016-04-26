@@ -36,8 +36,8 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * Created by ConGa on 28/03/2016.
- */
+* Created by ConGa on 28/03/2016.
+*/
 public class AddNewTaskFragment extends Fragment {
     private static String TAG = AddNewTaskFragment.class.getSimpleName();
     private static String mPiorityTask[] ={"Normal" , "Important"};
@@ -290,7 +290,7 @@ public class AddNewTaskFragment extends Fragment {
 
 
                }
-               
+
            }
        });
 

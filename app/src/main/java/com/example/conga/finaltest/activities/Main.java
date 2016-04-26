@@ -13,12 +13,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.conga.finaltest.R;
 import com.example.conga.finaltest.adapters.NavDrawerListAdapter;
-import com.example.conga.finaltest.fragments.ListViewTaskFragment;
-import com.example.conga.finaltest.fragments.ReadNewsFragment;
+import com.example.conga.finaltest.fragments.DangKiNhanTinFragment;
+import com.example.conga.finaltest.fragments.KhoaTinCategoryFragment;
+
+import com.example.conga.finaltest.fragments.OfflineFragment;
+import com.example.conga.finaltest.fragments.TruongCategoryFragment;
 import com.example.conga.finaltest.models.NavDrawerItem;
 
 import java.util.ArrayList;
@@ -50,18 +52,13 @@ public class Main extends AppCompatActivity {
         setSupportActionBar(mToolbar);
 
         // Add Drawer Item to dataList
-//        mDataList.add(new NavDrawerItem(R.string.title_nav_inCountry_news, R.drawable.express1));
-//        mDataList.add(new NavDrawerItem(String.valueOf(R.string.title_nav_national_news), R.drawable.cnn1));
-//        mDataList.add(new NavDrawerItem(String.valueOf(R.string.title_nav_register_receive_news), R.drawable.regis));
-//        mDataList.add(new NavDrawerItem(String.valueOf(R.string.title_nav_settings), R.drawable.ic_settings_black_24dp));
-//        mDataList.add(new NavDrawerItem(String.valueOf(R.string.title_nav_add_on), R.drawable.tienich1));
-//        mDataList.add(new NavDrawerItem(String.valueOf(R.string.title_nav_about_app), R.drawable.about1));
-        mDataList.add(new NavDrawerItem("Vn express", R.drawable.express1));
-        mDataList.add(new NavDrawerItem("CNN news", R.drawable.cnn1));
-        mDataList.add(new NavDrawerItem("Register", R.drawable.regis));
-        mDataList.add(new NavDrawerItem("Setting", R.drawable.ic_settings_black_24dp));
-        mDataList.add(new NavDrawerItem("Add-on", R.drawable.tienich1));
-        mDataList.add(new NavDrawerItem("About", R.drawable.about1));
+        mDataList.add(new NavDrawerItem(getString(R.string.title_nav_inCountry_news), R.drawable.logo));
+        mDataList.add(new NavDrawerItem(getString(R.string.khoatin), R.drawable.khoatin));
+        mDataList.add(new NavDrawerItem(getString(R.string.title_nav_register_receive_new), R.drawable.regis));
+        mDataList.add(new NavDrawerItem(getString(R.string.title_read_offline), R.drawable.ic_file_download_black_24dp));
+        mDataList.add(new NavDrawerItem(getString(R.string.title_nav_mo_rong), R.drawable.tienich1));
+        mDataList.add(new NavDrawerItem(getString(R.string.title_nav_about_appp), R.drawable.about1));
+
         mNavDrawerListAdapter = new NavDrawerListAdapter(this,
                 mDataList);
 
@@ -107,21 +104,32 @@ public class Main extends AppCompatActivity {
         Bundle args = new Bundle();
         switch (possition) {
             case 0:
-                fragment = new ReadNewsFragment();
-                args.putString(ReadNewsFragment.ITEM_NAME, mDataList.get(possition)
+                fragment = new TruongCategoryFragment();
+                args.putString(TruongCategoryFragment.ITEM_NAME, mDataList.get(possition)
                         .getTitle());
-//                args.putInt(ReadNewsFragment.IMAGE_RESOURCE_ID, dataList.get(possition)
-//                        .getImgResID());
+
                 break;
             case 1:
-                Toast.makeText(getApplicationContext(), "loading...", Toast.LENGTH_SHORT).show();
-                fragment = new ListViewTaskFragment();
-                args.putString(ListViewTaskFragment.ITEM_NAME, mDataList.get(possition)
+                fragment = new KhoaTinCategoryFragment();
+                args.putString(KhoaTinCategoryFragment.ITEM_NAME, mDataList.get(possition)
                         .getTitle());
-//                args.putInt(FragmentTwo.IMAGE_RESOURCE_ID, dataList.get(possition)
-//                        .getImgResID());
-                break;
 
+                break;
+            case 2:
+                fragment = new DangKiNhanTinFragment();
+                args.putString(DangKiNhanTinFragment.ITEM_NAME, mDataList.get(possition)
+                        .getTitle());
+                break;
+            case 3:
+                fragment = new OfflineFragment();
+                args.putString(OfflineFragment.ITEM_NAME, mDataList.get(possition)
+                        .getTitle());
+                break;
+            case 4:
+//                fragment = new ListViewTaskFragment();
+//                args.putString(ListViewTaskFragment.ITEM_NAME, mDataList.get(possition)
+//                        .getTitle());
+                break;
             default:
                 break;
         }

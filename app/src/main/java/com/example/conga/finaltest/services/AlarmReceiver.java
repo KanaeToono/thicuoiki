@@ -17,8 +17,8 @@ import com.example.conga.finaltest.fragments.EditTaskFragment;
 import com.example.conga.finaltest.models.Task;
 
 /**
- * Created by ConGa on 1/04/2016.
- */
+* Created by ConGa on 1/04/2016.
+*/
 public class AlarmReceiver extends Service {
     private static String TAG = AlarmReceiver.class.getSimpleName();
     private NotificationCompat.Builder mBuilder;

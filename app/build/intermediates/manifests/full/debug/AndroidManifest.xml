@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.conga.finaltest"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/NoActionBarTheme" >
+        <activity
+            android:name="com.example.conga.finaltest.activities.Main"
+            android:label="@string/toolbar_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.example.conga.finaltest.broadcastreceiver.OnAlarmReceiver" />
+
+        <service android:name="com.example.conga.finaltest.services.ReminderService" />
+
+        <activity
+            android:name="com.example.conga.finaltest.activities.DetailsTask"
+            android:label="@string/textViewDetails"
+            android:theme="@android:style/Theme.Holo.Dialog" >
+>
+        </activity>
+
+        <service android:name="com.example.conga.finaltest.services.UpdateNewFeedService" />
+        <service android:name="com.example.conga.finaltest.services.AlarmReceiver" />
+        <service android:name="com.example.conga.finaltest.services.ReminderService" />
+        <service android:name="com.example.conga.finaltest.services.WakeReminderIntentService" />
+    </application>
+
+</manifest>

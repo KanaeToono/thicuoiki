@@ -15,10 +15,47 @@ public class RssItem implements Parcelable {
     private String title;
     private String link;
     private Date pubDate;
+    private String date2;
     private int status_check;
     private int status_piority;
     private int status_delete_date;
     private String imageUrl;
+    private  String description;
+
+    public String getDate2() {
+        return date2;
+    }
+
+    public void setDate2(String date2) {
+        this.date2 = date2;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+
+        if (description.contains("<img ")){
+            String img  = description.substring(description.indexOf("<img "));
+            String cleanUp = img.substring(0, img.indexOf(">")+1);
+            img = img.substring(img.indexOf("src=") + 5);
+            int indexOf = img.indexOf("'");
+            if (indexOf==-1){
+                indexOf = img.indexOf("\"");
+            }
+            img = img.substring(0, indexOf);
+            setImageUrl(img);
+
+            this.description = this.description.replace(cleanUp, "");
+        }
+
+    }
+
+//    private void setImgLink(String img) {
+//        this.imageUrl =img;
+//    }
 
     public String getImageUrl() {
         return imageUrl;

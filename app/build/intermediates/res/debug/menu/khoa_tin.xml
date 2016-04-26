@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_thong_bao"
+        android:title="@string/action_thong_bao"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/action_co_hoi_nghe_nghiep"
+        android:title="@string/action_co_hoi_nghe_nghiep"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/action_doan_thanh_nien_it"
+        android:title="@string/action_doan_thanh_nien_it"
+        app:showAsAction="always|withText" />
+</menu><!-- From: file:/E:/TVO_TRAINING_ANDROID/finaltest/app/src/main/res/menu/khoa_tin.xml -->

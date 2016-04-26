@@ -42,4 +42,11 @@ public class Tools {
         return pubParseDateRss;
 
     }
+    public  Date parseXmlPubDateTruong(String pubDateRss) throws ParseException {
+        SimpleDateFormat format = new SimpleDateFormat("dd MMM yyyy HH:mm:ss Z", Locale.ENGLISH);
+        Date pubParseDateRss = null;
+        pubParseDateRss= format.parse(pubDateRss.substring(5));
+        return pubParseDateRss;
+
+    }
 }

@@ -38,8 +38,8 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * Created by ConGa on 28/03/2016.
- */
+* Created by ConGa on 28/03/2016.
+*/
 public class EditTaskFragment extends Fragment implements ICallBackFragment {
     private static String TAG = EditTaskFragment.class.getSimpleName();
     private static String mPiorityTask[] = {"Normal", "Important"};

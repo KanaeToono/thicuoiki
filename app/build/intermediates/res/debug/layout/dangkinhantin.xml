@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/primary_dark"
+        android:padding="10dp"
+        android:text="Danh mục đăng kí nhận tin"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+
+                    android:id="@+id/textViewTieuDiem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/textvieuborder"
+                    android:padding="10dp"
+                    android:text="Tiêu điểm "
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxTieuDiem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+
+                    android:id="@+id/textViewThongTinDaoTao"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/textvieuborder"
+                    android:padding="10dp"
+                    android:text="Thông tin đào tạo"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxThongTinDaoTao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+
+                    android:id="@+id/textViewCongTacSinhVien"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/textvieuborder"
+                    android:padding="10dp"
+                    android:text="Công tác sinh viên "
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxCongTacSinhVien"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+
+                    android:id="@+id/textViewKhaoThi"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/textvieuborder"
+                    android:padding="10dp"
+                    android:text="Khảo thí và đảm bảo chất lượng "
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxKhaoThi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+
+                    android:id="@+id/textViewKhoaHocSauDaiHoc"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/textvieuborder"
+                    android:padding="10dp"
+                    android:text="Khóa Học sau Đại Học"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxKhoaHocSauDaiHoc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+
+                    android:id="@+id/textViewDangUy"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/textvieuborder"
+                    android:padding="10dp"
+                    android:text="Đảng ủy"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxDangUy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+
+                    android:id="@+id/textViewDoanThanhNien"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/textvieuborder"
+                    android:padding="10dp"
+                    android:text="Đoàn Thanh Niên "
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxDoanThanhNien"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+
+                    android:id="@+id/textViewTinSinhVien"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/textvieuborder"
+                    android:padding="10dp"
+                    android:text="Tin Sinh Viên"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxTinSinhVien"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/textViewThongBao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/textvieuborder"
+                    android:padding="10dp"
+                    android:text="Thông báo khoa tin "
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxThongBao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+
+                    android:id="@+id/textViewCoHoiNgheNghiep"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/textvieuborder"
+                    android:padding="10dp"
+                    android:text="Cơ hộ nghề nghiệp "
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxCoHoiNgheNghiep"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/textViewDoanThanhNienIT"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/textvieuborder"
+                    android:padding="10dp"
+                    android:text="Đoàn Thanh niên "
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxDoanThanhNienIt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout><!-- From: file:/E:/TVO_TRAINING_ANDROID/finaltest/app/src/main/res/layout/dangkinhantin.xml -->

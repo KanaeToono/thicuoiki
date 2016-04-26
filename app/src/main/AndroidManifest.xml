@@ -8,7 +8,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:theme="@style/MyMaterialTheme.Base" >
+        android:theme="@style/NoActionBarTheme" >
         <activity
             android:name=".activities.Main"
             android:label="@string/toolbar_name" >
@@ -17,7 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".services.UpdateNewFeedService"/>
+
            <receiver android:name=".broadcastreceiver.OnAlarmReceiver"/>
         <service android:name=".services.ReminderService"/>
         <activity android:name=".activities.DetailsTask"
@@ -25,7 +25,10 @@
             android:theme="@android:style/Theme.Holo.Dialog">>
 
         </activity>
-
+<service android:name=".services.UpdateNewFeedService"/>
+        <service android:name=".services.AlarmReceiver"/>
+        <service android:name=".services.ReminderService"/>
+        <service android:name=".services.WakeReminderIntentService"/>
     </application>
 
 </manifest>

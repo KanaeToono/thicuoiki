@@ -240,16 +240,16 @@ public class ListViewTaskFragment extends Fragment implements ICallBackFragment,
 
     @Override
     public void callBackFragment() {
-        Fragment notyficationFrag = new ReadNewsFragment();
-        FragmentManager fragmentManager = getActivity()
-                .getSupportFragmentManager();
-        ;
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        fragmentTransaction.replace(R.id.main_content, notyficationFrag);
-        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
+//        Fragment notyficationFrag = new TruongRssFragment();
+//        FragmentManager fragmentManager = getActivity()
+//                .getSupportFragmentManager();
+//        ;
+//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//
+//        fragmentTransaction.replace(R.id.main_content, notyficationFrag);
+//        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+//        fragmentTransaction.addToBackStack(null);
+//        fragmentTransaction.commit();
     }
 
 
