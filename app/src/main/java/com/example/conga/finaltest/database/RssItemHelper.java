@@ -241,12 +241,51 @@ public static final String CREATE_TABLE_OFFLINE_NEWS = "CREATE TABLE " + TABLE_O
 
     @Override
     public void addNewThongTinDaoTao(RssItem rssItem) {
-
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        try {
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(KEY_TITLE, rssItem.getTitle());
+            contentValues.put(KEY_LINK, rssItem.getLink());
+            contentValues.put(KEY_PUBDATE, (rssItem.getDate2()));
+            contentValues.put(KEY_IMAGE, (rssItem.getImageUrl()));
+            sqLiteDatabase.insert(TABLE_THONG_TIN_DAO_TAO, null, contentValues);
+            sqLiteDatabase.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
     public ArrayList<RssItem> getAllThongTinDaoTao() {
-        return null;
+        SQLiteDatabase mDatabase = this.getWritableDatabase();
+        ArrayList<RssItem> contentRssArrayList = new ArrayList<RssItem>();
+        try {
+
+            String QUERY = " select * from " + TABLE_THONG_TIN_DAO_TAO +" order by " + KEY_PUBDATE + " desc ";
+            Cursor cursor = mDatabase.rawQuery(QUERY, null);
+            if (cursor.moveToFirst() && cursor.getCount() >= 1) {
+                do {
+                    RssItem item = new RssItem();
+                    item.setId_rssItem(cursor.getInt(0));
+                    item.setTitle(cursor.getString(1));
+
+                    item.setLink(cursor.getString(2));
+                    try {
+                        item.setDate2(cursor.getString(3));
+                    } catch (Exception e){
+                        e.printStackTrace();
+                    }
+                    item.setImageUrl(cursor.getString(4));
+                    contentRssArrayList.add(item);
+                } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(TAG, "ERROR LOAD TASK" + e + "");
+        }
+        // mDatabase.close();
+        return contentRssArrayList;
+
     }
 
     @Override
@@ -261,17 +300,67 @@ public static final String CREATE_TABLE_OFFLINE_NEWS = "CREATE TABLE " + TABLE_O
 
     @Override
     public int getCountThongTinDaoTao() {
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        int num = 0;
+        try {
+            String QUERY = "SELECT * FROM " + TABLE_THONG_TIN_DAO_TAO;
+            Cursor cursor = sqLiteDatabase.rawQuery(QUERY, null);
+            num = cursor.getCount();
+            sqLiteDatabase.close();
+            return num;
+        } catch (Exception e) {
+            Log.e("error", e + "");
+        }
         return 0;
     }
 
     @Override
     public void addNewCongTacSinhVien(RssItem rssItem) {
-
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        try {
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(KEY_TITLE, rssItem.getTitle());
+            contentValues.put(KEY_LINK, rssItem.getLink());
+            contentValues.put(KEY_PUBDATE, (rssItem.getDate2()));
+            contentValues.put(KEY_IMAGE, (rssItem.getImageUrl()));
+            sqLiteDatabase.insert(TABLE_CONG_TAC_SINH_VIEN, null, contentValues);
+            sqLiteDatabase.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
     public ArrayList<RssItem> getAllCongTacSinhVien() {
-        return null;
+        SQLiteDatabase mDatabase = this.getWritableDatabase();
+        ArrayList<RssItem> contentRssArrayList = new ArrayList<RssItem>();
+        try {
+
+            String QUERY = " select * from " + TABLE_CONG_TAC_SINH_VIEN +" order by " + KEY_PUBDATE + " desc ";
+            Cursor cursor = mDatabase.rawQuery(QUERY, null);
+            if (cursor.moveToFirst() && cursor.getCount() >= 1) {
+                do {
+                    RssItem item = new RssItem();
+                    item.setId_rssItem(cursor.getInt(0));
+                    item.setTitle(cursor.getString(1));
+
+                    item.setLink(cursor.getString(2));
+                    try {
+                        item.setDate2(cursor.getString(3));
+                    } catch (Exception e){
+                        e.printStackTrace();
+                    }
+                    item.setImageUrl(cursor.getString(4));
+                    contentRssArrayList.add(item);
+                } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(TAG, "ERROR LOAD TASK" + e + "");
+        }
+        // mDatabase.close();
+        return contentRssArrayList;
     }
 
     @Override
@@ -286,17 +375,68 @@ public static final String CREATE_TABLE_OFFLINE_NEWS = "CREATE TABLE " + TABLE_O
 
     @Override
     public int getCountCongTacSinhVien() {
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        int num = 0;
+        try {
+            String QUERY = "SELECT * FROM " + TABLE_CONG_TAC_SINH_VIEN;
+            Cursor cursor = sqLiteDatabase.rawQuery(QUERY, null);
+            num = cursor.getCount();
+            sqLiteDatabase.close();
+            return num;
+        } catch (Exception e) {
+            Log.e("error", e + "");
+        }
         return 0;
     }
 
     @Override
     public void addNewKhaoThi(RssItem rssItem) {
-
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        try {
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(KEY_TITLE, rssItem.getTitle());
+            contentValues.put(KEY_LINK, rssItem.getLink());
+            contentValues.put(KEY_PUBDATE, (rssItem.getDate2()));
+            contentValues.put(KEY_IMAGE, (rssItem.getImageUrl()));
+            sqLiteDatabase.insert(TABLE_KHAO_THI, null, contentValues);
+            sqLiteDatabase.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
     public ArrayList<RssItem> getAllKhaoThi() {
-        return null;
+
+        SQLiteDatabase mDatabase = this.getWritableDatabase();
+        ArrayList<RssItem> contentRssArrayList = new ArrayList<RssItem>();
+        try {
+
+            String QUERY = " select * from " + TABLE_KHAO_THI +" order by " + KEY_PUBDATE + " desc ";
+            Cursor cursor = mDatabase.rawQuery(QUERY, null);
+            if (cursor.moveToFirst() && cursor.getCount() >= 1) {
+                do {
+                    RssItem item = new RssItem();
+                    item.setId_rssItem(cursor.getInt(0));
+                    item.setTitle(cursor.getString(1));
+
+                    item.setLink(cursor.getString(2));
+                    try {
+                        item.setDate2(cursor.getString(3));
+                    } catch (Exception e){
+                        e.printStackTrace();
+                    }
+                    item.setImageUrl(cursor.getString(4));
+                    contentRssArrayList.add(item);
+                } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(TAG, "ERROR LOAD TASK" + e + "");
+        }
+        // mDatabase.close();
+        return contentRssArrayList;
     }
 
     @Override
@@ -311,17 +451,69 @@ public static final String CREATE_TABLE_OFFLINE_NEWS = "CREATE TABLE " + TABLE_O
 
     @Override
     public int getCountKhaoThi() {
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        int num = 0;
+        try {
+            String QUERY = "SELECT * FROM " + TABLE_KHAO_THI;
+            Cursor cursor = sqLiteDatabase.rawQuery(QUERY, null);
+            num = cursor.getCount();
+            sqLiteDatabase.close();
+            return num;
+        } catch (Exception e) {
+            Log.e("error", e + "");
+        }
         return 0;
     }
 
     @Override
     public void addNewKhoaHoc(RssItem rssItem) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        try {
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(KEY_TITLE, rssItem.getTitle());
+            contentValues.put(KEY_LINK, rssItem.getLink());
+            contentValues.put(KEY_PUBDATE, (rssItem.getDate2()));
+            contentValues.put(KEY_IMAGE, (rssItem.getImageUrl()));
+            sqLiteDatabase.insert(TABLE_KHOA_HOC_SAU_DAI_HOC, null, contentValues);
+            sqLiteDatabase.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
     }
 
     @Override
     public ArrayList<RssItem> getAllKhoaHoc() {
-        return null;
+
+        SQLiteDatabase mDatabase = this.getWritableDatabase();
+        ArrayList<RssItem> contentRssArrayList = new ArrayList<RssItem>();
+        try {
+
+            String QUERY = " select * from " + TABLE_KHOA_HOC_SAU_DAI_HOC +" order by " + KEY_PUBDATE + " desc ";
+            Cursor cursor = mDatabase.rawQuery(QUERY, null);
+            if (cursor.moveToFirst() && cursor.getCount() >= 1) {
+                do {
+                    RssItem item = new RssItem();
+                    item.setId_rssItem(cursor.getInt(0));
+                    item.setTitle(cursor.getString(1));
+
+                    item.setLink(cursor.getString(2));
+                    try {
+                        item.setDate2(cursor.getString(3));
+                    } catch (Exception e){
+                        e.printStackTrace();
+                    }
+                    item.setImageUrl(cursor.getString(4));
+                    contentRssArrayList.add(item);
+                } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(TAG, "ERROR LOAD TASK" + e + "");
+        }
+        // mDatabase.close();
+        return contentRssArrayList;
     }
 
     @Override
@@ -336,17 +528,69 @@ public static final String CREATE_TABLE_OFFLINE_NEWS = "CREATE TABLE " + TABLE_O
 
     @Override
     public int getCountKhoaHoc() {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        int num = 0;
+        try {
+            String QUERY = "SELECT * FROM " + TABLE_KHOA_HOC_SAU_DAI_HOC;
+            Cursor cursor = sqLiteDatabase.rawQuery(QUERY, null);
+            num = cursor.getCount();
+            sqLiteDatabase.close();
+            return num;
+        } catch (Exception e) {
+            Log.e("error", e + "");
+        }
         return 0;
+
     }
 
     @Override
     public void addNewDangUy(RssItem rssItem) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        try {
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(KEY_TITLE, rssItem.getTitle());
+            contentValues.put(KEY_LINK, rssItem.getLink());
+            contentValues.put(KEY_PUBDATE, (rssItem.getDate2()));
+            contentValues.put(KEY_IMAGE, (rssItem.getImageUrl()));
+            sqLiteDatabase.insert(TABLE_DANG_UY, null, contentValues);
+            sqLiteDatabase.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
     }
 
     @Override
     public ArrayList<RssItem> getAllDangUy() {
-        return null;
+
+        SQLiteDatabase mDatabase = this.getWritableDatabase();
+        ArrayList<RssItem> contentRssArrayList = new ArrayList<RssItem>();
+        try {
+
+            String QUERY = " select * from " + TABLE_DANG_UY +" order by " + KEY_PUBDATE + " desc ";
+            Cursor cursor = mDatabase.rawQuery(QUERY, null);
+            if (cursor.moveToFirst() && cursor.getCount() >= 1) {
+                do {
+                    RssItem item = new RssItem();
+                    item.setId_rssItem(cursor.getInt(0));
+                    item.setTitle(cursor.getString(1));
+
+                    item.setLink(cursor.getString(2));
+                    try {
+                        item.setDate2(cursor.getString(3));
+                    } catch (Exception e){
+                        e.printStackTrace();
+                    }
+                    item.setImageUrl(cursor.getString(4));
+                    contentRssArrayList.add(item);
+                } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(TAG, "ERROR LOAD TASK" + e + "");
+        }
+        // mDatabase.close();
+        return contentRssArrayList;
     }
 
     @Override
@@ -361,17 +605,70 @@ public static final String CREATE_TABLE_OFFLINE_NEWS = "CREATE TABLE " + TABLE_O
 
     @Override
     public int getCountDangUy() {
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        int num = 0;
+        try {
+            String QUERY = "SELECT * FROM " + TABLE_DANG_UY;
+            Cursor cursor = sqLiteDatabase.rawQuery(QUERY, null);
+            num = cursor.getCount();
+            sqLiteDatabase.close();
+            return num;
+        } catch (Exception e) {
+            Log.e("error", e + "");
+        }
         return 0;
     }
 
     @Override
     public void addNewDoanThanhNien(RssItem rssItem) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        try {
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(KEY_TITLE, rssItem.getTitle());
+            contentValues.put(KEY_LINK, rssItem.getLink());
+            contentValues.put(KEY_PUBDATE, (rssItem.getDate2()));
+            contentValues.put(KEY_IMAGE, (rssItem.getImageUrl()));
+            sqLiteDatabase.insert(TABLE_DOAN_THANH_NIEN, null, contentValues);
+            sqLiteDatabase.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
     }
 
     @Override
     public ArrayList<RssItem> getAllDoanThanhNien() {
-        return null;
+
+        SQLiteDatabase mDatabase = this.getWritableDatabase();
+        ArrayList<RssItem> contentRssArrayList = new ArrayList<RssItem>();
+        try {
+
+            String QUERY = " select * from " + TABLE_TIN_SINH_VIEN +" order by " + KEY_PUBDATE + " desc ";
+            Cursor cursor = mDatabase.rawQuery(QUERY, null);
+            if (cursor.moveToFirst() && cursor.getCount() >= 1) {
+                do {
+                    RssItem item = new RssItem();
+                    item.setId_rssItem(cursor.getInt(0));
+                    item.setTitle(cursor.getString(1));
+
+                    item.setLink(cursor.getString(2));
+                    try {
+                        item.setDate2(cursor.getString(3));
+                    } catch (Exception e){
+                        e.printStackTrace();
+                    }
+                    item.setImageUrl(cursor.getString(4));
+                    contentRssArrayList.add(item);
+                } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(TAG, "ERROR LOAD TASK" + e + "");
+        }
+        // mDatabase.close();
+        return contentRssArrayList;
+
     }
 
     @Override
@@ -386,17 +683,67 @@ public static final String CREATE_TABLE_OFFLINE_NEWS = "CREATE TABLE " + TABLE_O
 
     @Override
     public int getCountDoanThanhNien() {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        int num = 0;
+        try {
+            String QUERY = "SELECT * FROM " + TABLE_DOAN_THANH_NIEN;
+            Cursor cursor = sqLiteDatabase.rawQuery(QUERY, null);
+            num = cursor.getCount();
+            sqLiteDatabase.close();
+            return num;
+        } catch (Exception e) {
+            Log.e("error", e + "");
+        }
         return 0;
     }
 
     @Override
     public void addNewTinSinhVien(RssItem rssItem) {
-
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        try {
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(KEY_TITLE, rssItem.getTitle());
+            contentValues.put(KEY_LINK, rssItem.getLink());
+            contentValues.put(KEY_PUBDATE, (rssItem.getDate2()));
+            contentValues.put(KEY_IMAGE, (rssItem.getImageUrl()));
+            sqLiteDatabase.insert(TABLE_TIN_SINH_VIEN, null, contentValues);
+            sqLiteDatabase.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
     public ArrayList<RssItem> getAllTinSinhVien() {
-        return null;
+
+        SQLiteDatabase mDatabase = this.getWritableDatabase();
+        ArrayList<RssItem> contentRssArrayList = new ArrayList<RssItem>();
+        try {
+
+            String QUERY = " select * from " + TABLE_TIN_SINH_VIEN +" order by " + KEY_PUBDATE + " desc ";
+            Cursor cursor = mDatabase.rawQuery(QUERY, null);
+            if (cursor.moveToFirst() && cursor.getCount() >= 1) {
+                do {
+                    RssItem item = new RssItem();
+                    item.setId_rssItem(cursor.getInt(0));
+                    item.setTitle(cursor.getString(1));
+
+                    item.setLink(cursor.getString(2));
+                    try {
+                        item.setDate2(cursor.getString(3));
+                    } catch (Exception e){
+                        e.printStackTrace();
+                    }
+                    item.setImageUrl(cursor.getString(4));
+                    contentRssArrayList.add(item);
+                } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(TAG, "ERROR LOAD TASK" + e + "");
+        }
+        // mDatabase.close();
+        return contentRssArrayList;
     }
 
     @Override
@@ -411,17 +758,66 @@ public static final String CREATE_TABLE_OFFLINE_NEWS = "CREATE TABLE " + TABLE_O
 
     @Override
     public int getCountTinSinhVien() {
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        int num = 0;
+        try {
+            String QUERY = "SELECT * FROM " + TABLE_TIN_SINH_VIEN;
+            Cursor cursor = sqLiteDatabase.rawQuery(QUERY, null);
+            num = cursor.getCount();
+            sqLiteDatabase.close();
+            return num;
+        } catch (Exception e) {
+            Log.e("error", e + "");
+        }
         return 0;
     }
 
     @Override
     public void addNewThongBao(RssItem rssItem) {
-
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        try {
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(KEY_TITLE, rssItem.getTitle());
+            contentValues.put(KEY_LINK, rssItem.getLink());
+            contentValues.put(KEY_PUBDATE, format.format(rssItem.getPubDate()));
+            contentValues.put(KEY_IMAGE, (rssItem.getImageUrl()));
+            sqLiteDatabase.insert(TABLE_THONG_BAO, null, contentValues);
+            sqLiteDatabase.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
     public ArrayList<RssItem> getAllThongBao() {
-        return null;
+        SQLiteDatabase mDatabase = this.getWritableDatabase();
+        ArrayList<RssItem> contentRssArrayList = new ArrayList<RssItem>();
+        try {
+
+            String QUERY = " select * from " + TABLE_THONG_BAO +" order by " + KEY_PUBDATE + " desc ";
+            Cursor cursor = mDatabase.rawQuery(QUERY, null);
+            if (cursor.moveToFirst() && cursor.getCount() >= 1) {
+                do {
+                    RssItem item = new RssItem();
+                    item.setId_rssItem(cursor.getInt(0));
+                    item.setTitle(cursor.getString(1));
+
+                    item.setLink(cursor.getString(2));
+                    try {
+                        item.setPubDate(format.parse(cursor.getString(3)));
+                    } catch (Exception e){
+                        e.printStackTrace();
+                    }
+                    contentRssArrayList.add(item);
+                } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(TAG, "ERROR LOAD TASK" + e + "");
+        }
+        // mDatabase.close();
+        return contentRssArrayList;
     }
 
     @Override
@@ -436,17 +832,67 @@ public static final String CREATE_TABLE_OFFLINE_NEWS = "CREATE TABLE " + TABLE_O
 
     @Override
     public int getCountThongBao() {
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        int num = 0;
+        try {
+            String QUERY = "SELECT * FROM " + TABLE_THONG_BAO;
+            Cursor cursor = sqLiteDatabase.rawQuery(QUERY, null);
+            num = cursor.getCount();
+            sqLiteDatabase.close();
+            return num;
+        } catch (Exception e) {
+            Log.e("error", e + "");
+        }
         return 0;
     }
 
     @Override
     public void addNewDoanThanhNienIt(RssItem rssItem) {
-
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        try {
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(KEY_TITLE, rssItem.getTitle());
+            contentValues.put(KEY_LINK, rssItem.getLink());
+            contentValues.put(KEY_PUBDATE, format.format(rssItem.getPubDate()));
+            contentValues.put(KEY_IMAGE, (rssItem.getImageUrl()));
+            sqLiteDatabase.insert(TABLE_DOAN_THANH_NIEN_IT, null, contentValues);
+            sqLiteDatabase.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
     public ArrayList<RssItem> getAllDoanThanhNienIt() {
-        return null;
+        SQLiteDatabase mDatabase = this.getWritableDatabase();
+        ArrayList<RssItem> contentRssArrayList = new ArrayList<RssItem>();
+        try {
+
+            String QUERY = " select * from " + TABLE_DOAN_THANH_NIEN_IT +" order by " + KEY_PUBDATE + " desc ";
+            Cursor cursor = mDatabase.rawQuery(QUERY, null);
+            if (cursor.moveToFirst() && cursor.getCount() >= 1) {
+                do {
+                    RssItem item = new RssItem();
+                    item.setId_rssItem(cursor.getInt(0));
+                    item.setTitle(cursor.getString(1));
+
+                    item.setLink(cursor.getString(2));
+                    try {
+                        item.setPubDate(format.parse(cursor.getString(3)));
+                    } catch (Exception e){
+                        e.printStackTrace();
+                    }
+                    contentRssArrayList.add(item);
+                } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(TAG, "ERROR LOAD TASK" + e + "");
+        }
+        // mDatabase.close();
+        return contentRssArrayList;
+
     }
 
     @Override
@@ -461,17 +907,67 @@ public static final String CREATE_TABLE_OFFLINE_NEWS = "CREATE TABLE " + TABLE_O
 
     @Override
     public int getCountDoanThanhNienIt() {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        int num = 0;
+        try {
+            String QUERY = "SELECT * FROM " + TABLE_DOAN_THANH_NIEN_IT;
+            Cursor cursor = sqLiteDatabase.rawQuery(QUERY, null);
+            num = cursor.getCount();
+            sqLiteDatabase.close();
+            return num;
+        } catch (Exception e) {
+            Log.e("error", e + "");
+        }
         return 0;
     }
 
     @Override
     public void addNewCoHoiNgheNghiep(RssItem rssItem) {
-
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        try {
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(KEY_TITLE, rssItem.getTitle());
+            contentValues.put(KEY_LINK, rssItem.getLink());
+            contentValues.put(KEY_PUBDATE, (rssItem.getDate2()));
+            contentValues.put(KEY_IMAGE, (rssItem.getImageUrl()));
+            sqLiteDatabase.insert(TABLE_CO_HOI_NGHE_NGHIEP, null, contentValues);
+            sqLiteDatabase.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
     public ArrayList<RssItem> getAllCoHoiNgheNghiep() {
-        return null;
+        SQLiteDatabase mDatabase = this.getWritableDatabase();
+        ArrayList<RssItem> contentRssArrayList = new ArrayList<RssItem>();
+        try {
+
+            String QUERY = " select * from " + TABLE_CO_HOI_NGHE_NGHIEP +" order by " + KEY_PUBDATE + " desc ";
+            Cursor cursor = mDatabase.rawQuery(QUERY, null);
+            if (cursor.moveToFirst() && cursor.getCount() >= 1) {
+                do {
+                    RssItem item = new RssItem();
+                    item.setId_rssItem(cursor.getInt(0));
+                    item.setTitle(cursor.getString(1));
+
+                    item.setLink(cursor.getString(2));
+                    try {
+                        item.setPubDate(format.parse(cursor.getString(3)));
+                    } catch (Exception e){
+                        e.printStackTrace();
+                    }
+                    contentRssArrayList.add(item);
+                } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(TAG, "ERROR LOAD TASK" + e + "");
+        }
+        // mDatabase.close();
+        return contentRssArrayList;
+
+
     }
 
     @Override
@@ -484,8 +980,22 @@ public static final String CREATE_TABLE_OFFLINE_NEWS = "CREATE TABLE " + TABLE_O
 
     }
 
+
+
     @Override
     public int getCountCoHoiNgheNghiep() {
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        int num = 0;
+        try {
+            String QUERY = "SELECT * FROM " + TABLE_CO_HOI_NGHE_NGHIEP;
+            Cursor cursor = sqLiteDatabase.rawQuery(QUERY, null);
+            num = cursor.getCount();
+            sqLiteDatabase.close();
+            return num;
+        } catch (Exception e) {
+            Log.e("error", e + "");
+        }
         return 0;
     }
 

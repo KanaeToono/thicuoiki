@@ -18,8 +18,9 @@ import com.example.conga.finaltest.R;
 import com.example.conga.finaltest.adapters.NavDrawerListAdapter;
 import com.example.conga.finaltest.fragments.DangKiNhanTinFragment;
 import com.example.conga.finaltest.fragments.KhoaTinCategoryFragment;
-
+import com.example.conga.finaltest.fragments.ListViewTaskFragment;
 import com.example.conga.finaltest.fragments.OfflineFragment;
+import com.example.conga.finaltest.fragments.ThongTinUngDung;
 import com.example.conga.finaltest.fragments.TruongCategoryFragment;
 import com.example.conga.finaltest.models.NavDrawerItem;
 
@@ -56,7 +57,7 @@ public class Main extends AppCompatActivity {
         mDataList.add(new NavDrawerItem(getString(R.string.khoatin), R.drawable.khoatin));
         mDataList.add(new NavDrawerItem(getString(R.string.title_nav_register_receive_new), R.drawable.regis));
         mDataList.add(new NavDrawerItem(getString(R.string.title_read_offline), R.drawable.ic_file_download_black_24dp));
-        mDataList.add(new NavDrawerItem(getString(R.string.title_nav_mo_rong), R.drawable.tienich1));
+        mDataList.add(new NavDrawerItem(getString(R.string.title_nav_mo_rong), R.drawable.task));
         mDataList.add(new NavDrawerItem(getString(R.string.title_nav_about_appp), R.drawable.about1));
 
         mNavDrawerListAdapter = new NavDrawerListAdapter(this,
@@ -126,9 +127,14 @@ public class Main extends AppCompatActivity {
                         .getTitle());
                 break;
             case 4:
-//                fragment = new ListViewTaskFragment();
-//                args.putString(ListViewTaskFragment.ITEM_NAME, mDataList.get(possition)
-//                        .getTitle());
+                fragment = new ListViewTaskFragment();
+                args.putString(ListViewTaskFragment.ITEM_NAME, mDataList.get(possition)
+                        .getTitle());
+                break;
+            case 5:
+                fragment = new ThongTinUngDung();
+                args.putString(ThongTinUngDung.ITEM_NAME, mDataList.get(possition)
+                        .getTitle());
                 break;
             default:
                 break;
